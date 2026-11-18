@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UX Study Path</title>
+<meta name="description" content="A start-to-finish UX design learning path: 57 lessons across 11 modules, with study notes, key takeaways and videos for every method.">
+<meta property="og:title" content="UX Study Path">
+<meta property="og:description" content="A start-to-finish UX design learning path: 57 lessons across 11 modules, with study notes, key takeaways and videos for every method.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#262624" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+/* Apply the saved Light/Dark choice before first paint to avoid a flash */
+try { var m = JSON.parse(localStorage.getItem("uxsp.mode")); if (m === "light" || m === "dark") document.documentElement.setAttribute("data-mode", m); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#" aria-label="UX Study Path home">
+      <svg width="30" height="16" viewBox="0 0 30 16" aria-hidden="true"><path d="M1 8 L8 1 L15 8 L8 15 Z M15 8 L22 1 L29 8 L22 15 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>UX Study Path</span>
+    </a>
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 11 L14.5 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Search lessons and methods" aria-label="Search lessons" autocomplete="off">
+    </label>
+    <div class="prog-mini" title="Lessons completed"><div class="ring" id="ring"></div><span id="progText">0 / 0</span></div>
+    <div class="theme theme-btn-top"><button class="icon-btn" id="themeBtn" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu"></button><div class="theme-menu" id="themeMenu" role="menu" aria-label="Appearance" hidden></div></div>
+    <button class="outline-btn" id="outlineBtn" aria-expanded="false" aria-controls="rail">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Outline
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="rail" id="rail" aria-label="Course outline"></nav>
+  <main id="main"></main>
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
